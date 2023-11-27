@@ -1,0 +1,35 @@
+<header>
+    <h1>Ado Aplicações Interativas Desing Responsivo</h1>
+</header>
+<main>
+    <input type="text" [(ngModel)]="nome" placeholder="digite seu nome ">
+    <input type="text" [(ngModel)]="genero" placeholder="digite p genero desejado">
+
+    <p>nome escrito {{nome}}</p>
+
+    <div [ngSwitch]="genero">
+        <section *ngSwitchCase=" 'filme' ">
+            <ul *ngFor="let filmes of filme">
+                <li>{{filmes.nome}}</li>
+                <li>{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="500px" width="500px">
+            </ul>
+        </section>
+
+        <section *ngSwitchCase=" 'serie' ">
+            <ul *ngFor="let filmes of serie">
+                <li>{{filmes.nome}}</li>
+                <li>{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="500px" width="500px">
+            </ul>
+        </section>
+
+        <section *ngSwitchCase=" 'anime' ">
+            <ul *ngFor="let filmes of anime">
+                <li>{{filmes.nome}}</li>
+                <li>{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="500px" width="500px">
+            </ul>
+        </section>
+    </div>
+</main>
