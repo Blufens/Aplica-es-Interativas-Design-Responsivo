@@ -8,27 +8,27 @@
     <p>nome escrito {{nome}}</p>
 
     <div [ngSwitch]="genero">
-        <section *ngSwitchCase=" 'filme' ">
+        <section *ngSwitchCase=" 'filme' " class="container" >
             <ul *ngFor="let filmes of filme">
-                <li>{{filmes.nome}}</li>
-                <li>{{filmes.sinopse}}</li>
-                <img [src]="filmes.img" alt="" height="500px" width="500px">
+                <li class="titulo">{{filmes.nome}}</li>
+                <li class="texto">{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="300px" width="300px">
             </ul>
         </section>
 
-        <section *ngSwitchCase=" 'serie' ">
+        <section *ngSwitchCase=" 'serie' " class="container">
             <ul *ngFor="let filmes of serie">
-                <li>{{filmes.nome}}</li>
-                <li>{{filmes.sinopse}}</li>
-                <img [src]="filmes.img" alt="" height="500px" width="500px">
+                <li class="titulo">{{filmes.nome}}</li>
+                <li class="texto">{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="300px" width="300px">
             </ul>
         </section>
 
-        <section *ngSwitchCase=" 'anime' ">
+        <section *ngSwitchCase=" 'anime' " class="container">
             <ul *ngFor="let filmes of anime">
-                <li>{{filmes.nome}}</li>
-                <li>{{filmes.sinopse}}</li>
-                <img [src]="filmes.img" alt="" height="500px" width="500px">
+                <li class="titulo">{{filmes.nome}}</li>
+                <li class="texto">{{filmes.sinopse}}</li>
+                <img [src]="filmes.img" alt="" height="300px" width="300px">
             </ul>
         </section>
     </div>
